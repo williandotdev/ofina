@@ -1,0 +1,2763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofina | Produtos Personalizados Premium para Empresas e Brindes Corporativos</title>
+<meta name="description" content="A Ofina cria produtos personalizados premium para empresas, eventos, campanhas, brindes corporativos e kits B2B. Design, função e identidade em pedidos sob demanda.">
+<meta name="theme-color" content="#F5F0E8">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Ofina | Produtos Personalizados Premium para Empresas">
+<meta property="og:description" content="Objetos personalizados com design, função e presença de marca.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ofina",
+  "description": "Marca brasileira de objetos funcionais e personalizados com design contemporâneo, produção sob demanda e foco em presença de marca.",
+  "url": "https://ofina.studio",
+  "logo": "https://ofina.studio/logo.svg",
+  "areaServed": "BR"
+}
+</script>
+
+<style>
+/* ==========================================================================
+   OFINA · DESIGN TOKENS
+   Branding Book v1.0 · 2026
+   ========================================================================== */
+:root {
+  /* Cores primárias */
+  --carvao: #2D2A26;
+  --terracota: #C26340;
+  --areia: #F5F0E8;
+
+  /* Cores de apoio */
+  --areia-escura: #ECE5DA;
+  --pessego: #E8C8B5;
+  --pedra: #6B675F;
+  --linha: #D4CDC0;
+
+  /* Tipografia */
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Escala base 4 */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 32px;
+  --s-6: 48px;
+  --s-7: 64px;
+  --s-8: 96px;
+  --s-9: 128px;
+
+  /* Larguras */
+  --content-max: 1280px;
+  --reading-max: 720px;
+  --narrow-max: 580px;
+}
+
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--carvao);
+  background: var(--areia);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--terracota);
+  color: var(--areia);
+}
+
+/* ==========================================================================
+   LOGO MARK (a marca é a palavra; o i é o gesto)
+   ========================================================================== */
+.logo-mark {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: var(--carvao);
+  display: inline-block;
+  line-height: 1;
+}
+
+.logo-mark i {
+  font-style: italic;
+  color: var(--terracota);
+  font-weight: 400;
+}
+
+.logo-mark--light { color: var(--areia); }
+.logo-mark--terracota { color: var(--terracota); }
+.logo-mark--terracota i { color: var(--carvao); }
+
+/* ==========================================================================
+   TYPOGRAPHY HELPERS
+   ========================================================================== */
+.eyebrow {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pedra);
+  display: inline-block;
+}
+
+.section-mark {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--terracota);
+  text-transform: uppercase;
+}
+
+.serif-display {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.italic-accent {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+/* ==========================================================================
+   LAYOUT PRIMITIVES
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding-left: var(--s-4);
+  padding-right: var(--s-4);
+}
+
+@media (min-width: 768px) {
+  .container { padding-left: var(--s-6); padding-right: var(--s-6); }
+}
+
+.section {
+  padding-top: var(--s-8);
+  padding-bottom: var(--s-8);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section { padding-top: 120px; padding-bottom: 120px; }
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+  border-top: 1px solid var(--linha);
+  padding-top: var(--s-4);
+  margin-bottom: var(--s-7);
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: var(--s-7);
+  }
+}
+
+.divider-fine {
+  border: 0;
+  border-top: 1px solid var(--linha);
+  margin: 0;
+}
+
+/* ==========================================================================
+   NAV
+   ========================================================================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 240, 232, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.nav.scrolled {
+  border-bottom-color: var(--linha);
+}
+
+.nav-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--s-3) var(--s-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+@media (min-width: 768px) {
+  .nav-inner { padding: var(--s-4) var(--s-6); }
+}
+
+.nav-logo {
+  font-size: 28px;
+  font-family: var(--serif);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: var(--s-5);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .nav-links { display: flex; }
+}
+
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--carvao);
+  position: relative;
+  padding: var(--s-1) 0;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--terracota);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--terracota);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-cta { display: inline-flex; }
+}
+
+.nav-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--s-2);
+  background: transparent;
+}
+
+@media (min-width: 1024px) {
+  .nav-burger { display: none; }
+}
+
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--carvao);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-burger.active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.nav-burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-burger.active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.nav-mobile {
+  position: fixed;
+  inset: 0;
+  background: var(--areia);
+  display: none;
+  flex-direction: column;
+  padding: 80px var(--s-4) var(--s-6);
+  z-index: 99;
+}
+
+.nav-mobile.active {
+  display: flex;
+}
+
+.nav-mobile-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  margin-bottom: var(--s-6);
+}
+
+.nav-mobile-list a {
+  font-family: var(--serif);
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  color: var(--carvao);
+  border-bottom: 1px solid var(--linha);
+  padding-bottom: var(--s-3);
+  display: block;
+}
+
+.nav-mobile-list a:hover {
+  color: var(--terracota);
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: 14px 24px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--carvao);
+  color: var(--areia);
+  border-color: var(--carvao);
+}
+
+.btn-primary:hover {
+  background: var(--terracota);
+  border-color: var(--terracota);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--carvao);
+  border: 1px solid var(--carvao);
+}
+
+.btn-secondary:hover {
+  background: var(--carvao);
+  color: var(--areia);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--carvao);
+  border: 1px solid var(--linha);
+}
+
+.btn-ghost:hover {
+  border-color: var(--carvao);
+  color: var(--terracota);
+}
+
+.btn-light {
+  background: var(--areia);
+  color: var(--carvao);
+}
+
+.btn-light:hover {
+  background: var(--terracota);
+  color: var(--areia);
+}
+
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: 13px;
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--carvao);
+  border-bottom: 1px solid var(--carvao);
+  padding-bottom: 4px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-arrow svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-arrow:hover {
+  color: var(--terracota);
+  border-color: var(--terracota);
+}
+
+.btn-arrow:hover svg {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: var(--s-8);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero { padding-top: 180px; min-height: 92vh; }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-7);
+  align-items: end;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--s-8);
+  }
+}
+
+.hero-eyebrow {
+  margin-bottom: var(--s-5);
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--terracota);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(44px, 8.5vw, 104px);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  color: var(--carvao);
+  margin-bottom: var(--s-5);
+}
+
+.hero h1 .accent {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.hero-sub {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.5;
+  color: var(--carvao);
+  max-width: 620px;
+  margin-bottom: var(--s-4);
+}
+
+.hero-support {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--pedra);
+  max-width: 520px;
+  margin-bottom: var(--s-6);
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.hero-microcopy {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--pedra);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  border-left: 1px solid var(--linha);
+  padding-left: var(--s-4);
+}
+
+@media (min-width: 1024px) {
+  .hero-side { padding-left: var(--s-6); padding-bottom: var(--s-2); }
+}
+
+.hero-side-item {
+  display: grid;
+  gap: var(--s-1);
+}
+
+.hero-side-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pedra);
+}
+
+.hero-side-value {
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  color: var(--carvao);
+  line-height: 1.1;
+}
+
+.hero-side-value em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+/* Decorative SKU mark in hero */
+.hero-sku {
+  position: absolute;
+  top: 130px;
+  right: var(--s-4);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--pedra);
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-sku { display: block; right: var(--s-6); top: 160px; }
+}
+
+/* ==========================================================================
+   MANIFESTO SECTION
+   ========================================================================== */
+.manifesto {
+  background: var(--areia-escura);
+  padding-top: var(--s-8);
+  padding-bottom: var(--s-8);
+}
+
+@media (min-width: 768px) {
+  .manifesto { padding-top: 140px; padding-bottom: 140px; }
+}
+
+.manifesto-quote {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--carvao);
+  margin-bottom: var(--s-6);
+  max-width: 980px;
+}
+
+.manifesto-quote em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+  border-top: 1px solid var(--linha);
+  padding-top: var(--s-5);
+}
+
+@media (min-width: 768px) {
+  .manifesto-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-7);
+  }
+}
+
+.manifesto-text p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--carvao);
+  max-width: 540px;
+}
+
+.manifesto-text p + p {
+  margin-top: var(--s-3);
+}
+
+/* ==========================================================================
+   VALUE CARDS
+   ========================================================================== */
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--linha);
+}
+
+@media (min-width: 640px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.value-card {
+  padding: var(--s-5) var(--s-3);
+  border-bottom: 1px solid var(--linha);
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .value-card {
+    border-right: 1px solid var(--linha);
+  }
+  .value-card:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .value-card {
+    padding: var(--s-6) var(--s-4);
+    border-right: 1px solid var(--linha) !important;
+    border-bottom: none !important;
+  }
+  .value-card:last-child {
+    border-right: none !important;
+  }
+}
+
+.value-card:hover {
+  background: var(--areia-escura);
+}
+
+.value-card-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--terracota);
+  margin-bottom: var(--s-4);
+  display: block;
+}
+
+.value-card h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--s-3);
+}
+
+.value-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--pedra);
+}
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--s-8);
+  }
+}
+
+.about-h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.2vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--carvao);
+  margin-bottom: var(--s-5);
+}
+
+.about-h2 em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--carvao);
+  margin-bottom: var(--s-3);
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.pull-quote {
+  margin-top: var(--s-6);
+  padding: var(--s-6) var(--s-5);
+  background: var(--pessego);
+  border-left: 2px solid var(--terracota);
+}
+
+.pull-quote p {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--carvao);
+  margin-bottom: 0;
+}
+
+.pull-quote p em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+/* ==========================================================================
+   DIFFERENTIALS
+   ========================================================================== */
+.differentials {
+  background: var(--carvao);
+  color: var(--areia);
+}
+
+.differentials .section-header {
+  border-top-color: rgba(245, 240, 232, 0.18);
+}
+
+.differentials .eyebrow,
+.differentials .section-mark {
+  color: var(--pessego);
+}
+
+.differentials-intro {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--areia);
+  margin-bottom: var(--s-7);
+  max-width: 880px;
+}
+
+.differentials-intro em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.differentials-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.differential-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+  padding: var(--s-5) 0;
+  border-top: 1px solid rgba(245, 240, 232, 0.18);
+}
+
+@media (min-width: 768px) {
+  .differential-item {
+    grid-template-columns: 80px 1fr 2fr;
+    gap: var(--s-6);
+    align-items: start;
+    padding: var(--s-6) 0;
+  }
+}
+
+.differential-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--terracota);
+  padding-top: 6px;
+}
+
+.differential-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--areia);
+  line-height: 1.15;
+}
+
+.differential-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(245, 240, 232, 0.78);
+  max-width: 560px;
+}
+
+.differentials-list .differential-item:last-child {
+  border-bottom: 1px solid rgba(245, 240, 232, 0.18);
+}
+
+/* ==========================================================================
+   PRODUCTS
+   ========================================================================== */
+.products-intro {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--carvao);
+  max-width: 920px;
+  margin-bottom: var(--s-7);
+}
+
+.products-intro em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-6);
+  }
+}
+
+@media (min-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-card {
+  background: var(--areia-escura);
+  padding: var(--s-6) var(--s-5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card-num {
+  position: absolute;
+  top: var(--s-4);
+  right: var(--s-4);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--terracota);
+}
+
+.product-card h3 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--carvao);
+  margin-bottom: var(--s-3);
+  margin-top: var(--s-5);
+  max-width: 360px;
+}
+
+.product-card-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--pedra);
+  margin-bottom: var(--s-4);
+}
+
+.product-card-examples {
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--carvao);
+  border-top: 1px solid var(--linha);
+  padding-top: var(--s-3);
+}
+
+/* ==========================================================================
+   B2B HIGHLIGHT
+   ========================================================================== */
+.b2b {
+  background: var(--terracota);
+  color: var(--areia);
+  position: relative;
+  overflow: hidden;
+}
+
+.b2b .section-header {
+  border-top-color: rgba(245, 240, 232, 0.3);
+}
+
+.b2b .eyebrow,
+.b2b .section-mark {
+  color: var(--areia);
+  opacity: 0.75;
+}
+
+.b2b-h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--areia);
+  margin-bottom: var(--s-6);
+  max-width: 900px;
+}
+
+.b2b-h2 em {
+  font-style: italic;
+}
+
+.b2b-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  align-items: start;
+  margin-top: var(--s-7);
+}
+
+@media (min-width: 1024px) {
+  .b2b-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-8);
+  }
+}
+
+.b2b-text p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--areia);
+  margin-bottom: var(--s-3);
+  max-width: 540px;
+}
+
+.b2b-text p:last-child { margin-bottom: 0; }
+
+.b2b-card {
+  background: var(--areia);
+  color: var(--carvao);
+  padding: var(--s-6);
+  border: 1px solid var(--carvao);
+}
+
+.b2b-card-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: var(--s-3);
+  display: block;
+}
+
+.b2b-card-value {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  color: var(--carvao);
+  margin-bottom: var(--s-3);
+}
+
+.b2b-card-value em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.b2b-card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--pedra);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--linha);
+}
+
+.b2b-cta-row {
+  margin-top: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.b2b-microcopy {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--areia);
+  opacity: 0.78;
+  margin-top: var(--s-3);
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+/* ==========================================================================
+   PROCESS
+   ========================================================================== */
+.process-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.process-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--linha);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .process-item {
+    grid-template-columns: 100px 1fr 2fr;
+    gap: var(--s-6);
+    align-items: start;
+    padding: var(--s-6) 0;
+  }
+}
+
+.process-item:last-child {
+  border-bottom: 1px solid var(--linha);
+}
+
+.process-num {
+  font-family: var(--serif);
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--terracota);
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .process-num { font-size: 56px; }
+}
+
+.process-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--carvao);
+  padding-top: 8px;
+}
+
+.process-content p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--pedra);
+  max-width: 540px;
+}
+
+.process-content p + p {
+  margin-top: var(--s-2);
+}
+
+.process-microcopy {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--terracota);
+  margin-top: var(--s-2) !important;
+  font-style: normal !important;
+}
+
+.process-cta {
+  margin-top: var(--s-7);
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   APPLICATIONS
+   ========================================================================== */
+.applications {
+  background: var(--areia-escura);
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+}
+
+@media (min-width: 640px) {
+  .applications-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .applications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.application-card {
+  background: var(--areia);
+  padding: var(--s-5);
+  border: 1px solid var(--linha);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
+  min-height: 180px;
+}
+
+.application-card:hover {
+  border-color: var(--terracota);
+  transform: translateY(-2px);
+}
+
+.application-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--terracota);
+  color: var(--terracota);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.application-card h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--carvao);
+}
+
+.application-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--pedra);
+}
+
+/* ==========================================================================
+   TRUST
+   ========================================================================== */
+.trust-intro {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--carvao);
+  max-width: 720px;
+  margin-bottom: var(--s-5);
+}
+
+.trust-text {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--carvao);
+  max-width: 620px;
+  margin-bottom: var(--s-7);
+}
+
+.trust-text em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  border-top: 1px solid var(--linha);
+  padding-top: var(--s-5);
+}
+
+@media (min-width: 768px) {
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-5); }
+}
+
+@media (min-width: 1024px) {
+  .trust-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+.trust-block h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-bottom: var(--s-2);
+  color: var(--carvao);
+}
+
+.trust-block p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--pedra);
+}
+
+/* ==========================================================================
+   CTA INTERMEDIATE (dark variant)
+   ========================================================================== */
+.cta-block {
+  background: var(--carvao);
+  color: var(--areia);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-block::before {
+  content: 'Ofina';
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  font-family: var(--serif);
+  font-size: clamp(180px, 22vw, 320px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(194, 99, 64, 0.08);
+  font-style: italic;
+  pointer-events: none;
+}
+
+.cta-block-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-block .eyebrow {
+  color: var(--pessego);
+  margin-bottom: var(--s-4);
+}
+
+.cta-block h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--areia);
+  margin-bottom: var(--s-4);
+  max-width: 880px;
+}
+
+.cta-block h2 em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.cta-block p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(245, 240, 232, 0.82);
+  max-width: 580px;
+  margin-bottom: var(--s-5);
+}
+
+.cta-block-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-3);
+}
+
+.cta-block-microcopy {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(245, 240, 232, 0.7);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* ==========================================================================
+   FORM
+   ========================================================================== */
+.form-section {
+  background: var(--areia-escura);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-7);
+}
+
+@media (min-width: 1024px) {
+  .form-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--s-8);
+  }
+}
+
+.form-intro h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--carvao);
+  margin-bottom: var(--s-4);
+}
+
+.form-intro h2 em {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.form-intro p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--carvao);
+  margin-bottom: var(--s-3);
+}
+
+.form-intro .form-side-info {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--linha);
+}
+
+.form-intro .form-side-info p {
+  font-size: 14px;
+  color: var(--pedra);
+}
+
+.form-intro .form-side-info strong {
+  font-weight: 500;
+  color: var(--carvao);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+}
+
+.form-card {
+  background: var(--areia);
+  padding: var(--s-6) var(--s-5);
+  border: 1px solid var(--linha);
+}
+
+@media (min-width: 768px) {
+  .form-card { padding: var(--s-7); }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+
+@media (min-width: 640px) {
+  .form-row-2 { grid-template-columns: 1fr 1fr; }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.form-field label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pedra);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--linha);
+  padding: var(--s-2) 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--carvao);
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-bottom-color: var(--terracota);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--linha);
+  opacity: 1;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--sans);
+}
+
+.form-card button[type="submit"] {
+  margin-top: var(--s-3);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .form-card button[type="submit"] { width: auto; }
+}
+
+.form-disclaimer {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--pedra);
+  margin-top: var(--s-4);
+  line-height: 1.6;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--linha);
+}
+
+.form-success {
+  display: none;
+  padding: var(--s-5);
+  background: var(--pessego);
+  border-left: 2px solid var(--terracota);
+  margin-top: var(--s-3);
+}
+
+.form-success.active { display: block; }
+
+.form-success h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: var(--s-2);
+  color: var(--carvao);
+}
+
+.form-success p {
+  font-size: 14px;
+  color: var(--carvao);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--linha);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--linha);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-4) 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .faq-trigger { padding: var(--s-5) 0; gap: var(--s-5); }
+}
+
+.faq-trigger:hover .faq-question {
+  color: var(--terracota);
+}
+
+.faq-question {
+  font-family: var(--serif);
+  font-size: clamp(19px, 1.8vw, 24px);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--carvao);
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.faq-toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 4px;
+}
+
+.faq-toggle::before,
+.faq-toggle::after {
+  content: '';
+  position: absolute;
+  background: var(--carvao);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.faq-toggle::before {
+  width: 14px;
+  height: 1px;
+}
+
+.faq-toggle::after {
+  width: 1px;
+  height: 14px;
+}
+
+.faq-item.open .faq-toggle::after {
+  transform: rotate(90deg);
+}
+
+.faq-item.open .faq-toggle::before,
+.faq-item.open .faq-toggle::after {
+  background: var(--terracota);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.open .faq-content {
+  max-height: 480px;
+}
+
+.faq-content-inner {
+  padding-bottom: var(--s-5);
+  padding-right: var(--s-6);
+}
+
+.faq-content-inner p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--pedra);
+  max-width: 720px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background: var(--carvao);
+  color: var(--areia);
+  padding: var(--s-7) 0 var(--s-5);
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+  padding-bottom: var(--s-6);
+  border-bottom: 1px solid rgba(245, 240, 232, 0.18);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: var(--s-7);
+  }
+}
+
+.footer-logo {
+  font-size: 64px;
+  margin-bottom: var(--s-4);
+  display: block;
+  font-family: var(--serif);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.footer-logo i {
+  color: var(--terracota);
+  font-style: italic;
+}
+
+.footer-tagline {
+  font-family: var(--serif);
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  color: var(--pessego);
+  margin-bottom: var(--s-4);
+  font-style: italic;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(245, 240, 232, 0.78);
+  max-width: 480px;
+}
+
+.footer-col-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pessego);
+  margin-bottom: var(--s-4);
+  display: block;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.footer-list a {
+  font-size: 14px;
+  color: rgba(245, 240, 232, 0.85);
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.footer-list a:hover {
+  color: var(--terracota);
+  border-bottom-color: var(--terracota);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding-top: var(--s-4);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(245, 240, 232, 0.55);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-in-d1 { animation-delay: 0.1s; }
+.fade-in-d2 { animation-delay: 0.2s; }
+.fade-in-d3 { animation-delay: 0.3s; }
+.fade-in-d4 { animation-delay: 0.4s; }
+.fade-in-d5 { animation-delay: 0.5s; }
+.fade-in-d6 { animation-delay: 0.6s; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==========================================================================
+     NAV
+     ========================================================================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo logo-mark" aria-label="Ofina · Início">Of<i>i</i>na</a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#a-ofina">A Ofina</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#empresas">Empresas</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#aplicacoes">Aplicações</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <a href="#orcamento" class="btn btn-primary nav-cta">Solicitar orçamento</a>
+
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <ul class="nav-mobile-list">
+      <li><a href="#a-ofina">A Ofina</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#empresas">Empresas</a></li>
+      <li><a href="#processo">Processo</a></li>
+      <li><a href="#aplicacoes">Aplicações</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#orcamento" class="btn btn-primary">Solicitar orçamento</a>
+  </div>
+</header>
+
+<!-- ==========================================================================
+     HERO
+     ========================================================================== -->
+<section class="hero">
+  <span class="hero-sku">SKU · 0001 / OFINA / B2B / 2026</span>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow fade-in">
+          <span class="eyebrow">Ofina · Personalização premium para empresas</span>
+        </div>
+
+        <h1 class="fade-in fade-in-d1">
+          Objetos personalizados com design, função e <span class="accent">presença</span> de marca.
+        </h1>
+
+        <p class="hero-sub fade-in fade-in-d2">
+          A Ofina cria produtos personalizados premium para empresas, eventos, campanhas, brindes corporativos e projetos especiais.
+        </p>
+
+        <p class="hero-support fade-in fade-in-d3">
+          Não fazemos brindes genéricos. Criamos objetos funcionais com estética contemporânea, produção sob demanda e personalização com padrão.
+        </p>
+
+        <div class="hero-ctas fade-in fade-in-d4">
+          <a href="#orcamento" class="btn btn-primary">Solicitar orçamento B2B</a>
+          <a href="#produtos" class="btn btn-secondary">Ver possibilidades</a>
+        </div>
+
+        <p class="hero-microcopy fade-in fade-in-d5">
+          Pedidos corporativos a partir de 200 unidades.<br>
+          Valores variam conforme produto, volume, acabamento e nível de personalização.
+        </p>
+      </div>
+
+      <aside class="hero-side fade-in fade-in-d4" aria-label="Atributos da marca">
+        <div class="hero-side-item">
+          <span class="hero-side-label">Pedido mínimo</span>
+          <span class="hero-side-value">200 <em>unid.</em></span>
+        </div>
+        <div class="hero-side-item">
+          <span class="hero-side-label">Ticket de partida</span>
+          <span class="hero-side-value">R$ 99 <em>/ un</em></span>
+        </div>
+        <div class="hero-side-item">
+          <span class="hero-side-label">Modelo</span>
+          <span class="hero-side-value">Sob <em>demanda</em></span>
+        </div>
+        <div class="hero-side-item">
+          <span class="hero-side-label">Atendimento</span>
+          <span class="hero-side-value">B2B <em>consultivo</em></span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     MANIFESTO — Não vende impressão 3D
+     ========================================================================== -->
+<section class="manifesto" id="a-ofina">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 01 · Manifesto</span>
+      <span class="eyebrow">Posicionamento da marca</span>
+    </div>
+
+    <h2 class="manifesto-quote reveal">
+      A Ofina não vende impressão 3D. <em>Vende objetos com identidade.</em>
+    </h2>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-text reveal">
+        <p>A impressão 3D é o meio. O que entregamos é <em>presença de marca em forma de objeto.</em></p>
+        <p>Cada peça nasce para ser útil, bonita e coerente com o contexto em que será usada: uma mesa de trabalho, um kit de boas-vindas, um evento corporativo, uma ação promocional ou uma experiência de relacionamento com clientes.</p>
+      </div>
+      <div class="manifesto-text reveal">
+        <p>A Ofina combina design contemporâneo, produção sob demanda e personalização em escala para empresas que querem sair do comum sem perder organização, prazo e padrão.</p>
+        <p style="font-style: italic; color: var(--terracota); font-family: var(--serif); font-size: 22px; line-height: 1.3; margin-top: var(--s-4);">
+          Menos excesso. Mais intenção.<br>
+          Menos brinde descartável. Mais presença de marca.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     VALUE CARDS
+     ========================================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 02 · Valores</span>
+      <span class="eyebrow">O que entregamos em cada projeto</span>
+    </div>
+
+    <div class="values-grid reveal">
+      <article class="value-card">
+        <span class="value-card-num">01</span>
+        <h3>Design com função</h3>
+        <p>Produtos pensados para uso real, não apenas para exposição.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card-num">02</span>
+        <h3>Personalização com padrão</h3>
+        <p>Nome, marca, cor, aplicação e acabamento com consistência visual.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card-num">03</span>
+        <h3>Produção sob demanda</h3>
+        <p>Sem estoque encalhado. Cada projeto nasce de uma demanda clara.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card-num">04</span>
+        <h3>Estética premium acessível</h3>
+        <p>Objetos com percepção de valor, feitos para marcas que querem ser lembradas.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card-num">05</span>
+        <h3>Escala para B2B</h3>
+        <p>Projetos corporativos com volume, planejamento e negociação por orçamento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     ABOUT
+     ========================================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 03 · Sobre</span>
+      <span class="eyebrow">Uma marca brasileira de objetos funcionais</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 class="about-h2">
+          Uma marca brasileira de objetos <em>funcionais</em> e personalizados.
+        </h2>
+      </div>
+
+      <div class="about-text reveal">
+        <p>A Ofina nasceu para ocupar um espaço entre o artesanal genérico e a frieza industrial.</p>
+        <p>Criamos objetos personalizados para rotinas, ambientes e marcas que valorizam organização, estética e identidade. Nosso catálogo é enxuto, autoral e pensado para crescer com disciplina: poucos produtos, bem resolvidos, com margem para adaptação e personalização.</p>
+        <p>Para empresas, isso significa uma solução mais cuidadosa do que o brinde comum. Para quem recebe, significa um objeto que faz sentido, tem uso e carrega uma lembrança positiva da marca.</p>
+
+        <div class="pull-quote">
+          <p>Menos <em>excesso</em>. Mais <em>intenção</em>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     DIFFERENTIALS (dark)
+     ========================================================================== -->
+<section class="section differentials">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 04 · Diferenciais</span>
+      <span class="eyebrow">Por que escolher a Ofina</span>
+    </div>
+
+    <p class="differentials-intro reveal">
+      Porque uma ação de marca não precisa terminar em <em>um objeto esquecido na gaveta.</em>
+    </p>
+
+    <div class="differentials-list">
+      <article class="differential-item reveal">
+        <span class="differential-num">01 / 05</span>
+        <h3 class="differential-title">Catálogo enxuto e bem escolhido</h3>
+        <p class="differential-text">Trabalhamos com uma linha objetiva de produtos funcionais. Isso reduz ruído, melhora o processo de escolha e permite mais controle sobre qualidade, prazo e acabamento.</p>
+      </article>
+
+      <article class="differential-item reveal">
+        <span class="differential-num">02 / 05</span>
+        <h3 class="differential-title">Personalização sem aparência improvisada</h3>
+        <p class="differential-text">A peça pode carregar nome, marca, frase, código, campanha ou identidade visual — sempre com cuidado estético. Personalização não precisa parecer adaptação de última hora.</p>
+      </article>
+
+      <article class="differential-item reveal">
+        <span class="differential-num">03 / 05</span>
+        <h3 class="differential-title">Produção ágil sob demanda</h3>
+        <p class="differential-text">Produzimos conforme o projeto. Isso permite testar, ajustar, repetir e escalar sem depender de grandes estoques prontos.</p>
+      </article>
+
+      <article class="differential-item reveal">
+        <span class="differential-num">04 / 05</span>
+        <h3 class="differential-title">Estética contemporânea</h3>
+        <p class="differential-text">A Ofina tem uma linguagem visual própria: moderna, quente, organizada e premium. O produto final precisa parecer parte da marca que o entrega.</p>
+      </article>
+
+      <article class="differential-item reveal">
+        <span class="differential-num">05 / 05</span>
+        <h3 class="differential-title">Atendimento consultivo</h3>
+        <p class="differential-text">Você mostra onde quer usar. A gente ajuda a transformar a ideia em um produto viável, bonito e adequado ao objetivo comercial.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PRODUCTS
+     ========================================================================== -->
+<section class="section" id="produtos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 05 · Produtos</span>
+      <span class="eyebrow">Categorias que personalizamos</span>
+    </div>
+
+    <p class="products-intro reveal">
+      Produtos personalizados para marcas que querem <em>ser lembradas.</em>
+    </p>
+
+    <div class="products-grid">
+      <article class="product-card reveal">
+        <span class="product-card-num">01 / 05</span>
+        <h3>Organizadores de mesa e home office</h3>
+        <p class="product-card-desc">Peças para escritórios, equipes, clientes e kits de onboarding. Ideais para marcas que querem estar presentes na rotina de quem recebe.</p>
+        <div class="product-card-examples">
+          organizador modular · suporte de mesa · porta-cartão · suporte para celular · suporte para headset · acessórios de setup
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <span class="product-card-num">02 / 05</span>
+        <h3>Suportes funcionais premium</h3>
+        <p class="product-card-desc">Produtos úteis para mesa, tecnologia, atendimento, recepção, eventos e ambientes comerciais. Funcionam bem para empresas que querem unir utilidade e lembrança de marca.</p>
+        <div class="product-card-examples">
+          uso corporativo · recepção · ativação · eventos
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <span class="product-card-num">03 / 05</span>
+        <h3>Placas, nomes e itens personalizados</h3>
+        <p class="product-card-desc">Peças com nome, frase, setor, campanha, marca ou identificação visual. Podem ser usadas em mesas, kits, ativações, lojas, stands e eventos.</p>
+        <div class="product-card-examples">
+          identificação · sinalização · branding interno · stands
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <span class="product-card-num">04 / 05</span>
+        <h3>Kits corporativos personalizados</h3>
+        <p class="product-card-desc">Combinações de produtos para ações especiais, boas-vindas, datas comemorativas, campanhas internas, relacionamento com clientes e presentes institucionais.</p>
+        <div class="product-card-examples">
+          onboarding · welcome kit · presente corporativo · campanha interna
+        </div>
+      </article>
+
+      <article class="product-card reveal">
+        <span class="product-card-num">05 / 05</span>
+        <h3>Brindes corporativos premium</h3>
+        <p class="product-card-desc">Itens personalizados para empresas que querem fugir da lógica de "brinde barato" e entregar algo com mais valor percebido.</p>
+        <div class="product-card-examples">
+          B2B · alto valor percebido · acabamento premium
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     B2B HIGHLIGHT
+     ========================================================================== -->
+<section class="section b2b" id="empresas">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 06 · B2B</span>
+      <span class="eyebrow">Para empresas e pedidos corporativos</span>
+    </div>
+
+    <h2 class="b2b-h2 reveal">
+      Personalização premium para pedidos corporativos <em>em volume.</em>
+    </h2>
+
+    <div class="b2b-grid">
+      <div class="b2b-text reveal">
+        <p>A Ofina atende empresas que buscam produtos personalizados para eventos, campanhas, ações promocionais, kits, relacionamento com clientes, ativações de marca e presentes corporativos.</p>
+        <p>Nosso foco inicial são pedidos B2B de alto ticket, com produção em volume e projeto sob orçamento.</p>
+        <p>Cada orçamento é construído a partir do objetivo da ação. Entendemos o uso, o público, o prazo, a quantidade e o nível de personalização para indicar o melhor caminho.</p>
+
+        <div class="b2b-cta-row">
+          <a href="#orcamento" class="btn btn-light">Quero um orçamento para minha empresa</a>
+        </div>
+
+        <p class="b2b-microcopy">
+          Envie a ideia do projeto. A Ofina responde com possibilidades, prazos e estimativa comercial.
+        </p>
+      </div>
+
+      <aside class="b2b-card reveal">
+        <span class="b2b-card-label">Referência comercial</span>
+        <div class="b2b-card-value">A partir de <em>R$ 99</em><span style="font-size: 0.45em; color: var(--pedra); font-style: normal; letter-spacing: 0.04em;"> / un</span></div>
+        <p class="b2b-card-desc">Pedidos mínimos a partir de 200 unidades. O ticket final depende do produto, volume, acabamento, embalagem, prazo e complexidade da personalização.</p>
+
+        <div style="margin-top: var(--s-5); display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); padding-top: var(--s-4); border-top: 1px solid var(--linha);">
+          <div>
+            <span class="b2b-card-label" style="color: var(--pedra); margin-bottom: 4px;">Pedido mínimo</span>
+            <span style="font-family: var(--serif); font-size: 28px; color: var(--carvao); letter-spacing: -0.02em; line-height: 1;">200 unid.</span>
+          </div>
+          <div>
+            <span class="b2b-card-label" style="color: var(--pedra); margin-bottom: 4px;">Modelo</span>
+            <span style="font-family: var(--serif); font-size: 28px; color: var(--carvao); letter-spacing: -0.02em; line-height: 1; font-style: italic;">Sob orçamento</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PROCESS
+     ========================================================================== -->
+<section class="section" id="processo">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 07 · Processo</span>
+      <span class="eyebrow">Como funciona o orçamento</span>
+    </div>
+
+    <p class="products-intro reveal">
+      A negociação é simples, mas <em>cuidadosa.</em>
+    </p>
+
+    <div class="process-list">
+      <article class="process-item reveal">
+        <span class="process-num">01</span>
+        <h3 class="process-title">Briefing inicial</h3>
+        <div class="process-content">
+          <p>Você informa quantidade, objetivo da ação, prazo desejado, tipo de produto, identidade da marca e referências do projeto.</p>
+          <p class="process-microcopy">Pode ser uma ideia pronta ou apenas uma intenção. A gente ajuda a organizar.</p>
+        </div>
+      </article>
+
+      <article class="process-item reveal">
+        <span class="process-num">02</span>
+        <h3 class="process-title">Curadoria da solução</h3>
+        <div class="process-content">
+          <p>A Ofina indica os produtos mais adequados para o uso, considerando viabilidade, estética, prazo, volume e personalização.</p>
+        </div>
+      </article>
+
+      <article class="process-item reveal">
+        <span class="process-num">03</span>
+        <h3 class="process-title">Proposta comercial</h3>
+        <div class="process-content">
+          <p>Enviamos uma proposta com escopo, quantidade, valores, prazo estimado e condições de produção.</p>
+        </div>
+      </article>
+
+      <article class="process-item reveal">
+        <span class="process-num">04</span>
+        <h3 class="process-title">Validação visual</h3>
+        <div class="process-content">
+          <p>Quando necessário, alinhamos aplicação de marca, cor, nome, frase, acabamento ou versão do produto antes da produção.</p>
+        </div>
+      </article>
+
+      <article class="process-item reveal">
+        <span class="process-num">05</span>
+        <h3 class="process-title">Produção sob demanda</h3>
+        <div class="process-content">
+          <p>Após aprovação, o pedido entra em produção conforme o volume combinado.</p>
+        </div>
+      </article>
+
+      <article class="process-item reveal">
+        <span class="process-num">06</span>
+        <h3 class="process-title">Embalagem e entrega</h3>
+        <div class="process-content">
+          <p>As peças são finalizadas com cuidado e preparadas para entrega, evento, distribuição ou envio corporativo.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="process-cta reveal">
+      <a href="#orcamento" class="btn btn-primary">Começar meu orçamento</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     APPLICATIONS
+     ========================================================================== -->
+<section class="section applications" id="aplicacoes">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 08 · Aplicações</span>
+      <span class="eyebrow">Onde usar produtos Ofina</span>
+    </div>
+
+    <h2 class="about-h2 reveal" style="max-width: 880px; margin-bottom: var(--s-5);">
+      Projetos para marcas, equipes, eventos e <em>relacionamento.</em>
+    </h2>
+
+    <p class="trust-text reveal">
+      Os produtos personalizados da Ofina podem ser usados em diferentes momentos da jornada de uma marca. Da primeira impressão em um evento ao presente de relacionamento com clientes, cada objeto pode comunicar cuidado, organização e valor.
+    </p>
+
+    <div class="applications-grid">
+      <article class="application-card reveal">
+        <span class="application-icon">A</span>
+        <h3>Brindes corporativos premium</h3>
+        <p>Para empresas que querem entregar algo mais útil, bonito e alinhado à marca.</p>
+      </article>
+      <article class="application-card reveal">
+        <span class="application-icon">B</span>
+        <h3>Eventos e feiras</h3>
+        <p>Produtos personalizados para stands, credenciamento, lembranças, ativações e experiências presenciais.</p>
+      </article>
+      <article class="application-card reveal">
+        <span class="application-icon">C</span>
+        <h3>Campanhas promocionais</h3>
+        <p>Itens criados para reforçar lançamentos, ações sazonais, campanhas de vendas ou ativações de marca.</p>
+      </article>
+      <article class="application-card reveal">
+        <span class="application-icon">D</span>
+        <h3>Kits personalizados</h3>
+        <p>Kits para onboarding, boas-vindas, clientes especiais, colaboradores, parceiros e datas comemorativas.</p>
+      </article>
+      <article class="application-card reveal">
+        <span class="application-icon">E</span>
+        <h3>Ações de relacionamento</h3>
+        <p>Objetos pensados para manter sua marca presente na rotina de clientes, parceiros e equipes.</p>
+      </article>
+      <article class="application-card reveal">
+        <span class="application-icon">F</span>
+        <h3>Projetos especiais</h3>
+        <p>Peças sob demanda para marcas que precisam de algo específico, funcional e com identidade própria.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     TRUST
+     ========================================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 09 · Confiança</span>
+      <span class="eyebrow">Método e cuidado em cada entrega</span>
+    </div>
+
+    <h2 class="trust-intro reveal">
+      Feito com <em style="font-style: italic; color: var(--terracota);">método</em>. Entregue com cuidado.
+    </h2>
+
+    <p class="trust-text reveal">
+      A Ofina trabalha com uma lógica simples: poucos produtos, bom acabamento, personalização bem aplicada e produção organizada. Não somos uma fábrica de qualquer coisa. <em>Somos uma marca com linha definida, processo repetível e foco em percepção de valor.</em>
+    </p>
+
+    <div class="trust-grid reveal">
+      <div class="trust-block">
+        <h3>Produção sob demanda</h3>
+        <p>Cada lote é produzido a partir de uma necessidade real.</p>
+      </div>
+      <div class="trust-block">
+        <h3>Briefing orientado</h3>
+        <p>Antes de produzir, entendemos o uso e o objetivo do projeto.</p>
+      </div>
+      <div class="trust-block">
+        <h3>Acabamento e embalagem</h3>
+        <p>A experiência não termina no produto. A apresentação também importa.</p>
+      </div>
+      <div class="trust-block">
+        <h3>Atendimento direto</h3>
+        <p>Contato simples, negociação objetiva e acompanhamento do pedido.</p>
+      </div>
+      <div class="trust-block">
+        <h3>Escala com controle</h3>
+        <p>Pedidos em volume com foco em padrão, prazo e consistência.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CTA INTERMEDIATE (dark)
+     ========================================================================== -->
+<section class="section cta-block">
+  <div class="container">
+    <div class="cta-block-inner">
+      <span class="eyebrow">§ 10 · Próxima ação</span>
+      <h2>Sua próxima ação de marca pode ser <em>mais útil, bonita e memorável.</em></h2>
+      <p>Conte para a Ofina o que sua empresa quer entregar. A gente transforma a ideia em um objeto personalizado com design, função e identidade.</p>
+
+      <div class="cta-block-actions">
+        <a href="#orcamento" class="btn btn-light">Solicitar orçamento B2B</a>
+        <a href="https://wa.me/5562000000000?text=Olá,%20vim%20pelo%20site%20da%20Ofina%20e%20quero%20solicitar%20um%20orçamento%20B2B%20para%20produtos%20personalizados." class="btn btn-secondary" style="color: var(--areia); border-color: var(--areia);">Falar no WhatsApp</a>
+      </div>
+
+      <p class="cta-block-microcopy">
+        Atendimento para pedidos corporativos, eventos, campanhas e projetos personalizados.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FORM
+     ========================================================================== -->
+<section class="section form-section" id="orcamento">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 11 · Orçamento</span>
+      <span class="eyebrow">Vamos criar algo com a sua marca?</span>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-intro reveal">
+        <h2>Vamos criar algo <em>com a sua marca?</em></h2>
+        <p>Se sua empresa busca produtos personalizados premium para pedidos em volume, a Ofina pode ajudar a transformar a ideia em uma entrega com mais presença, utilidade e valor percebido.</p>
+        <p>Preencha o formulário ou fale com a gente pelo WhatsApp. Quanto mais claro for o objetivo, melhor será a proposta.</p>
+
+        <div class="form-side-info">
+          <p><strong>Pedido mínimo</strong></p>
+          <p>200 unidades. A proposta final depende do produto, personalização, volume, embalagem e prazo.</p>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <form id="orcamentoForm" novalidate>
+          <div class="form-row form-row-2">
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            </div>
+            <div class="form-field">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" required placeholder="Nome da empresa">
+            </div>
+          </div>
+
+          <div class="form-row form-row-2">
+            <div class="form-field">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000">
+            </div>
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required placeholder="voce@empresa.com">
+            </div>
+          </div>
+
+          <div class="form-row form-row-2">
+            <div class="form-field">
+              <label for="quantidade">Quantidade estimada</label>
+              <input type="text" id="quantidade" name="quantidade" placeholder="A partir de 200 unidades">
+            </div>
+            <div class="form-field">
+              <label for="prazo">Prazo desejado</label>
+              <input type="text" id="prazo" name="prazo" placeholder="Data ideal de entrega">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="tipo">Tipo de projeto</label>
+              <select id="tipo" name="tipo">
+                <option value="">Selecione uma opção</option>
+                <option>Brindes corporativos</option>
+                <option>Kits personalizados</option>
+                <option>Eventos e feiras</option>
+                <option>Campanha promocional</option>
+                <option>Ação de relacionamento</option>
+                <option>Projeto especial</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Conte o que você quer personalizar, para quem será entregue e qual o objetivo da ação."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar pedido de orçamento</button>
+
+          <p class="form-disclaimer">
+            Pedidos corporativos a partir de 200 unidades. A proposta final depende do produto, personalização, volume, embalagem e prazo.
+          </p>
+
+          <div class="form-success" id="formSuccess">
+            <h4>Recebemos seu pedido.</h4>
+            <p>Vamos analisar as informações e entrar em contato para entender melhor o projeto.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FAQ
+     ========================================================================== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-mark">§ 12 · FAQ</span>
+      <span class="eyebrow">Perguntas frequentes</span>
+    </div>
+
+    <h2 class="about-h2 reveal" style="max-width: 880px; margin-bottom: var(--s-6);">
+      Sobre produtos personalizados premium <em>para empresas.</em>
+    </h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">A Ofina faz brindes corporativos personalizados?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>Sim. A Ofina desenvolve brindes corporativos personalizados com foco em design, utilidade e percepção premium. O objetivo é criar peças que representem a marca com mais cuidado do que brindes promocionais comuns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">Qual é o pedido mínimo para empresas?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>O foco inicial da Ofina são pedidos B2B em volume, com pedido mínimo a partir de 200 unidades. A quantidade ideal pode variar conforme o tipo de produto, personalização e prazo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">Qual é o valor médio por unidade?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>Como referência comercial, os projetos podem partir de um ticket médio de R$ 99 por unidade. O valor final depende do produto, volume, acabamento, embalagem, prazo e complexidade da personalização.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">A Ofina cria produtos personalizados para eventos?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>Sim. A Ofina pode desenvolver itens personalizados para eventos corporativos, feiras, ativações de marca, lançamentos, campanhas promocionais e experiências presenciais.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">A empresa pode enviar a identidade visual da marca?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>Sim. O ideal é enviar logo, cores, referências visuais e objetivo da ação. Assim, a personalização pode ser pensada com mais coerência e melhor acabamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">A Ofina trabalha com kits personalizados?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>Sim. A Ofina pode montar kits personalizados para clientes, colaboradores, parceiros, onboarding, datas comemorativas, eventos e campanhas institucionais.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">A Ofina vende produtos prontos ou apenas sob encomenda?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>A Ofina trabalha com produção sob demanda. Isso permite personalizar os produtos conforme o projeto e evita produção sem destino definido.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">A Ofina atende empresas de quais segmentos?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>A Ofina pode atender empresas, escritórios, clínicas, imobiliárias, marcas locais, eventos, equipes comerciais, agências, negócios digitais e organizações que buscam produtos personalizados com estética premium.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">Os produtos são feitos em impressão 3D?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>A impressão 3D faz parte do processo produtivo, mas não é o centro da proposta. A Ofina entrega objetos funcionais e personalizados com design, identidade e aplicação de marca.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">Como solicitar um orçamento?</span>
+          <span class="faq-toggle"></span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-content-inner">
+            <p>Basta enviar a quantidade desejada, prazo, objetivo da ação, tipo de produto e referências de personalização. A Ofina analisa o projeto e retorna com uma proposta comercial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo logo-mark logo-mark--light">Of<i>i</i>na</span>
+        <p class="footer-tagline">Feito para marcas que querem ser lembradas.</p>
+        <p class="footer-text">
+          A Ofina é uma marca brasileira de objetos funcionais e personalizados com design contemporâneo, produção sob demanda e foco em presença de marca. Criamos produtos personalizados premium para empresas, eventos, campanhas, kits corporativos e projetos especiais.
+        </p>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Navegar</span>
+        <ul class="footer-list">
+          <li><a href="#a-ofina">A Ofina</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#empresas">Empresas</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#aplicacoes">Aplicações</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Contato</span>
+        <ul class="footer-list">
+          <li><a href="#orcamento">Solicitar orçamento</a></li>
+          <li><a href="https://wa.me/5562000000000">WhatsApp</a></li>
+          <li><a href="mailto:contato@ofina.studio">contato@ofina.studio</a></li>
+          <li><a href="https://instagram.com/ofina.studio">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Ofina · Todos os direitos reservados</span>
+      <span>Goiânia · Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// =============================================================================
+// NAV — burger toggle, scroll state, mobile menu
+// =============================================================================
+const nav = document.getElementById('nav');
+const burger = document.getElementById('navBurger');
+const mobileMenu = document.getElementById('navMobile');
+const mobileLinks = mobileMenu.querySelectorAll('a');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    burger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > 40) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+  lastScroll = currentScroll;
+}, { passive: true });
+
+// =============================================================================
+// SCROLL REVEAL
+// =============================================================================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// =============================================================================
+// FAQ — accordion
+// =============================================================================
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const trigger = item.querySelector('.faq-trigger');
+  trigger.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    faqItems.forEach(other => {
+      other.classList.remove('open');
+      other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// =============================================================================
+// FORM — handle submit (no real backend; demonstration)
+// =============================================================================
+const form = document.getElementById('orcamentoForm');
+const success = document.getElementById('formSuccess');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Quick validation
+  const required = form.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(field => {
+    if (!field.value.trim()) {
+      field.style.borderBottomColor = 'var(--terracota)';
+      valid = false;
+    } else {
+      field.style.borderBottomColor = '';
+    }
+  });
+  if (!valid) return;
+
+  // Build WhatsApp message
+  const data = new FormData(form);
+  const msg = [
+    `Olá, vim pelo site da Ofina e quero solicitar um orçamento B2B.`,
+    ``,
+    `Nome: ${data.get('nome')}`,
+    `Empresa: ${data.get('empresa')}`,
+    `WhatsApp: ${data.get('whatsapp')}`,
+    `E-mail: ${data.get('email')}`,
+    `Quantidade estimada: ${data.get('quantidade') || '—'}`,
+    `Prazo desejado: ${data.get('prazo') || '—'}`,
+    `Tipo de projeto: ${data.get('tipo') || '—'}`,
+    ``,
+    `Objetivo da ação:`,
+    `${data.get('mensagem') || '—'}`
+  ].join('\n');
+
+  const url = `https://wa.me/5562000000000?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+
+  success.classList.add('active');
+  form.reset();
+
+  setTimeout(() => {
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 100);
+});
+</script>
+
+</body>
+</html>
