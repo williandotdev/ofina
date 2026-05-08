@@ -1,9 +1,9 @@
-name: Implantação via FTP Locaweb
+name: Deploy via FTP Locaweb
 
 on:
   push:
     branches:
-      - principal
+      - main
 
 jobs:
   deploy:
